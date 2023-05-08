@@ -22,6 +22,19 @@ for i in range(n+1):
 
             array[i][j]=array[i-1][j]
 
+i=n
+j=m
 
+while (i>0 or j>0):
 
-print(array[n][m])
+    if (array[i][j] == array[i-1][j]):
+
+        print(f"{i} is not use!")
+        i=i-1
+    else:
+
+        print(f"{i} is use")
+        j=j-weight[i]
+        i=i-1
+        
+    
