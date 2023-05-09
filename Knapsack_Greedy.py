@@ -25,13 +25,12 @@ for i in range(n):
         if (j==2):
             array[i][j]=weight[i]
 
-
+#division value / weight
 for i in range(n):
 
     for j in range(3):
 
         result[i+1]=value[i]/weight[i] 
-
 
 #=============================================== sort dict =================================
 sorted_footballers_by_goals = sorted(result.items(), key=lambda x:x[1], reverse=True)
@@ -45,13 +44,10 @@ for k,v in converted_dict.items():
     
     if (weight[k-1] + sum_weight <= m):
 
-        if weight[k-1] + sum_weight <= m:
-
-            final_value+=value[k-1]
-        
-            sum_weight+=weight[k-1]
+        final_value+=value[k-1]
+ 
+        sum_weight+=weight[k-1]
        
-
 
     elif (weight[k-1] + sum_weight > m ):
    
@@ -61,6 +57,5 @@ for k,v in converted_dict.items():
     
             final_value+=(a / weight[k-1]) * value[k-1]
             sum_weight+=weight[k-1]
-
 
 print(final_value)
