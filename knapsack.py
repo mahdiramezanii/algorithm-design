@@ -18,6 +18,7 @@ def get_info():
 
     return result      
 
+
 def algoritm(n,m,weight,value,array):
 
     array=numpy.random.randint(0,1,size=(n+1,m+1))
@@ -94,4 +95,5 @@ def algoritm(n,m,weight,value,array):
 if __name__ == "__main__":
 
     information=get_info()
+    #             n              m             widget           value          array
     algoritm(information[0],information[1],information[2],information[3],information[4])
