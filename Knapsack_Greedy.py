@@ -8,29 +8,28 @@ value=[12,18,5,15,30]
 final_value=0
 sum_weight=0
 result={}
+
 array=numpy.random.randint(0,1,size=(n,3))
 
-for i in range(n):
+# for i in range(n):
 
-    for j in range(3):
+#     for j in range(3):
 
-        if (j==0):
+#         if (j==0):
 
-            array[i][j]=i+1
+#             array[i][j]=i+1
 
-        if (j==1):
+#         elif (j==1):
 
-            array[i][j]=value[i]
+#             array[i][j]=value[i]
 
-        if (j==2):
-            array[i][j]=weight[i]
+#         elif (j==2):
+#             array[i][j]=weight[i]
 
 #division value / weight
 for i in range(n):
 
-    for j in range(3):
-
-        result[i+1]=value[i]/weight[i] 
+    result[i+1]=value[i]/weight[i] 
 
 #=============================================== sort dict =================================
 sorted_footballers_by_goals = sorted(result.items(), key=lambda x:x[1], reverse=True)
