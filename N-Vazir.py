@@ -9,10 +9,9 @@ for i in range(4):
 
 
         arr[i][j]="-"
-        
-        
 
         
+              
 def print_array(array):
 
 
@@ -26,24 +25,19 @@ def is_safe(array,row,col):
 
 
         if array[row][i]=="Q":
-            print("YESS")
+          
           
             return False
         
    
-
-
     for i in range(row):
         
         if array[i][col]=="Q":
-            print("NOOOO")
-            
+           
 
             return False 
 
-     
-
-
+    
     for i in range(row,4):
 
         for j in range(col,4):
@@ -75,8 +69,7 @@ def is_safe(array,row,col):
 
 
             if (i == j):
-                print("HHHH")
-                print(i,j)
+                
                
                 if array[i][j]=="Q":
                    

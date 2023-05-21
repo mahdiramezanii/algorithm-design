@@ -1,30 +1,16 @@
 import numpy
 
 n=5
-m=30 #وزن کوله پشتی
+m=40 #وزن کوله پشتی
 
-weight=[8,6,10,3,15]
-value=[12,18,5,15,30]
+weight=[8,6,10,3,15,20]
+value=[12,18,5,15,30,10]
 final_value=0
 sum_weight=0
 result={}
 
 array=numpy.random.randint(0,1,size=(n,3))
 
-# for i in range(n):
-
-#     for j in range(3):
-
-#         if (j==0):
-
-#             array[i][j]=i+1
-
-#         elif (j==1):
-
-#             array[i][j]=value[i]
-
-#         elif (j==2):
-#             array[i][j]=weight[i]
 
 #division value / weight
 for i in range(n):
@@ -35,13 +21,13 @@ for i in range(n):
 sorted_footballers_by_goals = sorted(result.items(), key=lambda x:x[1], reverse=True)
 converted_dict = dict(sorted_footballers_by_goals)
 print(converted_dict)
-#===============================================
+#=========================================================================================================
 
 
 for k,v in converted_dict.items():
 
     
-    if (weight[k-1] + sum_weight <= m):
+    if ((weight[k-1] + sum_weight) <= m):
 
         final_value+=value[k-1]
  
